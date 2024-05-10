@@ -1,0 +1,8 @@
+{"commands" : {
+    "hello" : {
+        "authorization" : "lambda",
+        "type" : "fun",
+        "desc" : "Say hello to the person who invoc the command",
+        "function" : "hello.js"
+    }
+}}
