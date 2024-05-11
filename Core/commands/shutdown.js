@@ -10,6 +10,7 @@ function code(channel,client,tags,param1,param2){ //Param1 et 2 ne sont pas obli
             console.log("Déconnection du tchat.")
         }).catch((err) => {
             //
+            console.log("Erreur à la déconnection.")
         });
 
 }

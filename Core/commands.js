@@ -16,9 +16,9 @@ class Commands {
     }
 
     asEnoughLevel(channel,tags,level){
-        console.log(tags.mod, " & ", level)
-        if(tags.username === channel) return compareLevel(Streamer,level);
-        if(tags.mod){console.log("Par icite"); return compareLevel(Modos,level)};
+        console.log(tags.username, " & ", level, " & ", channel)
+        if(tags.username === channel.replace("#", "")) return compareLevel(Streamer,level);
+        if(tags.mod) return compareLevel(Modos,level);
         //if(tags.)
         compareLevel(Lambda,level);
     }

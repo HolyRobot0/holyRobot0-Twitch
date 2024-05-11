@@ -9,6 +9,7 @@ class Followers extends Subs{}
 class Lambda extends Followers{}
 
 function compareLevel(level1, level2){
+    if(level1===Streamer) return true; //Le streamer ici a tout les droits.
     if(level1===level2) return true; //Le deux sont au même niveau
     if(level2.prototype instanceof level1) return true; //level2 < level1
     if(level1.prototype instanceof level2) return false; //level1 < level2
