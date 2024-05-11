@@ -33,7 +33,7 @@ client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages.
 	if(self) return;
 	var commandParams = tryInvocCommand(message);
-	console.log(commandParams);
+	//console.log(commandParams);
 	if((commandParams != null) || (commandParams != undefined) ){
 		if(commands.isCommand(commandParams.commandName.toLowerCase())) {
 			commands.execute(channel,client,commandParams.commandName,tags,commandParams.param1,commandParams.param2);
