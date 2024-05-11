@@ -2,9 +2,10 @@
   "name": "holyrobot0-twitch",
   "version": "1.0.0",
   "description": "Another Twitch Chatbot",
-  "main": "Core",
+  "main": "Core/core.js",
   "scripts": {
-    "start" : "node core.js",
+    "start" : "node",
+    "dev" : "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "BrokHoly",
