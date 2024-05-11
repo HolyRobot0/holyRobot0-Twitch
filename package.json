@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node",
     "dev": "nodemon",
-    "electron": "nodemon",
+    "electron": "electron Interface/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "BrokHoly",
