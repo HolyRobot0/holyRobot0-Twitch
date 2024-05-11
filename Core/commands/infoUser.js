@@ -1,10 +1,12 @@
 const { Lambda, Streamer, Modos, VIP, Subs, Followers } = require('../permLevel.js')
-const level = Modos; //streamer > modos > vip > subs > followers > lambda
-const type = ['easter-egg']; //info, fun, easter-egg, etc....
-const desc = 'Simple description of the command';
+const level = Modos;
+const type = ['info','modération'];
+const desc = `Affiche les information de l'utilisateur demandé dans le tchat`;
 
-function code(channel,client,tags,param1,param2){ //Param1 et 2 ne sont pas obligatoires
-    client.say(channel,`Ptdr t ki ${tags.username} ?`)
+function code(channel,client,tags,param1){ 
+    if(param1===undefined) console.log("Aucun utilisateur spécifié.");
+    client.say(channel,`Infos sur ${param1} : 
+    ...`)
 }
 
 
