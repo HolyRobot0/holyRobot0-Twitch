@@ -1,8 +1,10 @@
+const PATH = './commands/'
+
 class Commands {
 
     commands = {
-        '!hello' : require('./commands/hello.js'),
-        '!coucou' : require('./commands/coucou.js')
+        '!hello' : require(`${PATH}hello.js`),
+        '!coucou' : require(`${PATH}coucou.js`)
     }
 
 
