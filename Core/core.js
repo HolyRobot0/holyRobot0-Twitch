@@ -15,19 +15,30 @@ const client = new tmi.Client({
 
 client.connect();
 
+//Extrait la commande et ses paramètre si patern reconnu
+function tryInvocCommand(message){
+	if((message.trim())[0]==='!'){
+		words = message.split(" ");
+		if(words.length==1) return {'commandName' : words[0]};
+		if(words.length==2) return {'commandName' : words[0], 'param1' : words[1]};
+		if(words.length>2) return {'commandName':words[0], 'param1':words[1], 'param2':words[2]};
+	} else return;
+}
+
+//Une fonction qui détecte des mots clés qui ne sont pas des commandes.
+function detectKeyword(){}
+
 //Il existe d'autre options que le 'message'. 
 client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages.
 	if(self) return;
-
-	if(message.toLowerCase() === '!hello') {
-		// "@alca, heya!"
-		// client.say(channel, `@${tags.username}, heya!`);
-		if(commands.isCommand('!hello')){
-			commands.execute(channel,client,'!hello',tags);
+	var commandParams = tryInvocCommand(message);
+	console.log(commandParams);
+	if((commandParams != null) || (commandParams != undefined) ){
+		if(commands.isCommand(commandParams.commandName.toLowerCase())) {
+			commands.execute(channel,client,commandParams.commandName,tags,commandParams.param1,commandParams.param2);
 		} else {
-			console.log("La commande n'existe pas frérot.")
+				console.log("La commande n'existe pas frérot.")
 		}
 	}
-	// console.log(tags)
 });
