@@ -1,4 +1,5 @@
-const authorization = ['lambda']; //streamer > modos > vip > subs > followers > lambda
+const { Lambda, Streamer, Modos, VIP, Subs, Followers } = require('../permLevel.js')
+const level = Lambda; //streamer > modos > vip > subs > followers > lambda
 const type = ['easter-egg']; //info, fun, easter-egg, etc....
 const desc = 'Simple description of the command';
 
@@ -7,4 +8,4 @@ function code(channel,client,tags,param1,param2){ //Param1 et 2 ne sont pas obli
 }
 
 
-module.exports = {authorization, type, desc, code};
+module.exports = {level, type, desc, code};
