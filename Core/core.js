@@ -28,6 +28,11 @@ function tryInvocCommand(message){
 //Une fonction qui détecte des mots clés qui ne sont pas des commandes.
 function detectKeyword(){}
 
+function addToUserDB(tags){
+	
+}
+
+
 //Il existe d'autre options que le 'message'. 
 client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages.
@@ -38,7 +43,9 @@ client.on('message', (channel, tags, message, self) => {
 		if(commands.isCommand(commandParams.commandName.toLowerCase())) {
 			commands.execute(channel,client,commandParams.commandName.toLowerCase(),tags,commandParams.param1,commandParams.param2);
 		} else {
-				console.log("La commande n'existe pas frérot.")
+				console.log("La commande n'existe pas frérot.");
 		}
 	}
+
+	addToUserDB(tags);
 });
