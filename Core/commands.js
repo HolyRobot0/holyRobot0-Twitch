@@ -5,7 +5,9 @@ class Commands {
 
     commands = {
         '!hello' : require(`${PATH}hello.js`),
-        '!coucou' : require(`${PATH}coucou.js`)
+        '!coucou' : require(`${PATH}coucou.js`),
+        '!infouser' : require(`${PATH}infoUser.js`),
+        '!shutdown' : require(`${PATH}shutdown.js`)
     }
 
 
