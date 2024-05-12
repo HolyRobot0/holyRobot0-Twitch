@@ -7,7 +7,10 @@ class Commands {
         '!hello' : require(`${PATH}hello.js`),
         '!coucou' : require(`${PATH}coucou.js`),
         '!infouser' : require(`${PATH}infoUser.js`),
-        '!shutdown' : require(`${PATH}shutdown.js`)
+        '!shutdown' : require(`${PATH}shutdown.js`),
+        '!don' : require(`${PATH}don.js`),
+        '!dons' : require(`${PATH}don.js`),
+        '!discord' : require(`${PATH}discord.js`)
     }
 
 
