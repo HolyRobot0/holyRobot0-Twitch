@@ -33,6 +33,7 @@ function addToUserDB(tags){
 }
 
 
+//MESSAGES ET COMMANDS '!'
 //Il existe d'autre options que le 'message'. 
 client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages.
@@ -50,8 +51,13 @@ client.on('message', (channel, tags, message, self) => {
 	addToUserDB(tags);
 });
 
-
+//RAIDS
 const raid = require('./raids.js')
 client.on('raided',(channel,username,viewers) => {
 	raid.raider(client,channel,username,viewers);
 });
+
+//SUBS
+client.on('subscription',(channel,username,methods,message,userstate)=>{})
+
+//Comment ça se passe pour les follow ?
