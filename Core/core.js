@@ -49,3 +49,9 @@ client.on('message', (channel, tags, message, self) => {
 
 	addToUserDB(tags);
 });
+
+
+const raid = require('./raids.js')
+client.on('raided',(channel,username,viewers) => {
+	raid.raider(client,channel,username,viewers);
+});
