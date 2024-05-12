@@ -2,7 +2,9 @@ function raider(client,channel,username,viewers){
     switch(username){
         case 'lashyza' : {
             client.say(channel,`OUE SALUT SHYZA !! OMGGGG Z'ÊTES ${viewers} ?! bruh`);
-            client.say(channel,`Si vous la connaissez pas allez la suivre !! <lien>x3`);
+            client.say(channel,`Si vous la connaissez pas allez la suivre !! https://www.twitch.tv/lashyza
+            https://www.twitch.tv/lashyza
+            https://www.twitch.tv/lashyza`);
             break;
         }
         case 'lvcyd' : {
@@ -13,6 +15,13 @@ function raider(client,channel,username,viewers){
             https://www.twitch.tv/lvcyd
             https://www.twitch.tv/lvcyd`);
             break;
+        }
+        case 'alfgoto' : {
+            client.say(channel,`Un instant.... Je crois bien qu'un légende vient de nous raid....`);
+            client.say(channel,`MERCI ALF !!! Et coucou à tes ${viewers} viewers !!`);
+            client.say(channel,`https://www.twitch.tv/alfgoto
+            https://www.twitch.tv/alfgoto
+            https://www.twitch.tv/alfgoto`)
         }
         case 'holyrobot0' : {
             client.say(channel,`C'est le monde à l'envers là ${username} D:`);
